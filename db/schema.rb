@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116002920) do
+ActiveRecord::Schema.define(version: 20170116004731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "charities", force: :cascade do |t|
+    t.string   "charity_name"
+    t.string   "cause"
+    t.text     "description"
+    t.string   "location"
+    t.string   "logo"
+    t.string   "url"
+    t.text     "shipping_address"
+    t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["user_id"], name: "index_charities_on_user_id", using: :btree
+  end
 
   create_table "donors", force: :cascade do |t|
     t.string   "first_name"
@@ -32,5 +46,6 @@ ActiveRecord::Schema.define(version: 20170116002920) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "charities", "users"
   add_foreign_key "donors", "users"
 end
