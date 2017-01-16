@@ -1,6 +1,8 @@
 class DonorsController < ApplicationController
   before_action :set_donor, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :verify_authenticity_token
+
   # GET /donors
   # GET /donors.json
   def index
@@ -69,6 +71,6 @@ class DonorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donor_params
-      params.require(:donor).permit(:first_name, :last_name, :company_name)
+      params.require(:donor).permit(:first_name, :last_name, :company_name, :user_id)
     end
 end

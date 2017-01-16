@@ -1,5 +1,60 @@
-<h1>New User</h1>
+<div class="container">
+    <div class="row">
+        <form class="form-horizontal">
+            <fieldset>
 
-<%= render 'form', user: @user %>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="name">Username</label>
+                    <div class="col-md-4">
+                        <input id="username" name="username" type="text" placeholder="username" class="form-control input-md">
+                    </div>
+                </div>
 
-<%= link_to 'Back', users_path %>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Password</label>
+                    <div class="col-md-4">
+                        <input id="password" name="password" type="password" placeholder="password" class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="radio col-md-4">
+                    <label>
+                        <input type="radio" name="options-radios" id="options-radios1" value="option1" checked>
+                        Charity
+                    </label>
+
+                    <label>
+                        <input type="radio" name="options-radios" id="options-radios2" value="option2">
+                        Donor
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="reg"></label>
+                    <div class="col-md-4">
+                        <div id="register-button" name="reg" class="btn btn-primary">Register</div>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div id="donor-form" class="hide">
+  First Name: <input type="text" name="fname"> </br>
+  Last Name: <input type="text" name="lname"> </br>
+  Company Name: <input type="text" name="cname">
+</div>
+
+<div id="charity-form" class="hide">
+  Charity Name: <input type="text" name="chname"> </br>
+  Cause: <input type="text" name="cause"> </br>
+  Description: <input type="text" name="description"> </br>
+  Location: <input type="text" name="location"> </br>
+  Logo: <input type="text" name="logo"> </br>
+  Website: <input type="text" name="url"> </br>
+  Shipping Address: <input type="text" name="saddr">
+</div>
+
+<!-- <%= link_to 'Register', new_user_path %> -->
