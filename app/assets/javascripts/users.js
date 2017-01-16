@@ -24,20 +24,43 @@ $( document ).ready(function() {
     $.ajax(settings).done(function(response){
 
       // once the user is created - I want to create a donor or charity
-      var json = {"donor":{"user_id":response.id, "first_name": "Joe", "last_name": "Blogs", "company_name": "Joe's Burgers"}}
+      if($('#options-radios2').is(':checked')) {
+        // create donor
+        var json = {"donor":{"user_id":response.id, "first_name": $('#first-name').val(), "last_name": $('#last-name').val(), "company_name": $('#company-name').val()}}
+        var settings = {
+          url: '/donors',
+          method: 'post',
+          dataType: 'json',
+          data: json
+        };
+
+        // execute ajax to create donor
+        $.ajax(settings).done(function() {
+          $('#success-msg').removeClass('hide');
+        });
+
+    } else {
+
+      // create charity
+      var json = {"charity":{"user_id":response.id, "charity_name": $('#charity-name').val(),
+      "cause": $('#cause').val(), "description": $('#description').val(), "location": $('#location').val(),
+      "logo": $('#logo').val(), "url": $('#url').val(), "shipping_address": $('#shipping-addr').val()}}
       var settings = {
-        url: '/donors',
+        url: '/charities',
         method: 'post',
         dataType: 'json',
         data: json
-      };
-
-      // execute ajax to create donor
-      $.ajax(settings);
-    });
-  }
+      }
+      // execute ajax to create charity
+      $.ajax(settings).done(function() {
+        $('#success-msg').removeClass('hide');
+      });
+    }
+  });
+}
 
   $('#options-radios1').on('click', showCharity);
   $('#options-radios2').on('click', showDonor);
   $('#register-button').on('click', registerUser);
+
 });
