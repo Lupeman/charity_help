@@ -2,36 +2,37 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  color: #000000;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 
-.siteName {
+.navbar {
   background-color: #000000;
+  height:75px;
+  margin-left: 40px;
+  border: none;
+}
+.app-name {
+  font-size: 40px;
+
+}
+.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
   color: #ffffff;
-  padding:15px 80px;
-  margin-left:60px;
-  margin-top:-69px;
-}
-.nav {
-  margin:0;
-  text-align: right;
 }
 
-.nav_ul {
-  margin: 0;
-}
-.nav_ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding-top: 20px;
+.navbar-default .navbar-nav>li>a:hover{
+  color: #ffba00;
 }
 
-.nav_ul li a {
-  text-decoration: none;
-  color: #000000;
-  padding-right: 15px;
+.logo {
+  float:left;
+  height: 110px;
+  margin-top: -50px;
+  padding: 0;
+  margin-left: -20px;
 }
+
 
 #myCarousel {
   margin-top: 80px;
