@@ -2,7 +2,7 @@
 
 <h1>Charities</h1>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Charity name</th>
@@ -15,9 +15,49 @@
       <th>User</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <p id="error-message">Apologies, there aren't any charities matching that criteria.</p>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Charity Cause
+        <span class="caret"></span></button>
+        <ul id="cause" class="dropdown-menu">
+          <li>Animals</li>
+          <li>Homeless</li>
+          <li>Environmental</li>
+          <li>Health</li>
+          <li>Education</li>
+          <li>International NGOs</li>
+          <li>Arts & Culture</li>
+        </ul>
+      </div>
+    </div>
+<div class="col-md-4">
+  <p id="error-message">Apologies, there aren't any charities matching that criteria.</p>
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Charity Locations
+    <span class="caret"></span></button>
+    <ul id="location" class="dropdown-menu">
+      <li>Victoria</li>
+      <li>South Australia</li>
+      <li>Tasmania</li>
+      <li>New South Wales</li>
+      <li>Western Australia</li>
+      <li>Queensland</li>
+      <li>ACT</li>
+      <li>Northern Territory</li>
+      <li>International</li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
 
-  <tbody>
+<div id="charities-results"></div>
+
+  <!-- <tbody>
     <% @charities.each do |charity| %>
       <tr>
         <td><%= charity.charity_name %></td>
@@ -34,8 +74,8 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 
-<%= link_to 'New Charity', new_charity_path %>
+<!-- <%= link_to 'New Charity', new_charity_path %> -->

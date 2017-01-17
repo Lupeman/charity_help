@@ -3,10 +3,16 @@ class CharitiesController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
+
   # GET /charities
   # GET /charities.json
   def index
     @charities = Charity.all
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @charities }
+    end
   end
 
   # GET /charities/1
@@ -22,6 +28,14 @@ class CharitiesController < ApplicationController
   # GET /charities/1/edit
   def edit
   end
+
+  def search
+
+
+
+  end
+
+
 
   # POST /charities
   # POST /charities.json

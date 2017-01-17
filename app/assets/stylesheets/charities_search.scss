@@ -1,0 +1,13 @@
+.dropdown-menu li:hover {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+#error-message {
+  color: red;
+  visibility: hidden;
+}
+
+#error-message.error {
+  visibility: visible;
+}
