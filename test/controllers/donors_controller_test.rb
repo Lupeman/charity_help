@@ -3,6 +3,10 @@ require 'test_helper'
 class DonorsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @donor = donors(:one)
+    @donor2 = Donor.new
+    @donor2.first_name = 'Hail'
+    @donor2.last_name = "Satan"
+    @donor2.company_name = 'Hell'
   end
 
   test "should get index" do
@@ -17,10 +21,10 @@ class DonorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create donor" do
     assert_difference('Donor.count') do
-      post donors_url, params: { donor: { company_name: @donor.company_name, first_name: @donor.first_name, last_name: @donor.last_name } }
+      post donors_url, params: { donor: { company_name: @donor2.company_name, first_name: @donor2.first_name, last_name: @donor2.last_name, user_id: User.last.id } }
     end
 
-    assert_redirected_to donor_url(Donor.last)
+    assert_response :success
   end
 
   test "should show donor" do
@@ -34,8 +38,8 @@ class DonorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update donor" do
-    patch donor_url(@donor), params: { donor: { company_name: @donor.company_name, first_name: @donor.first_name, last_name: @donor.last_name } }
-    assert_redirected_to donor_url(@donor)
+    patch donor_url(@donor), params: { donor: { company_name: @donor.company_name, first_name: @donor.first_name, last_name: @donor.last_name, user_id: User.last.id } }
+    assert_response :success
   end
 
   test "should destroy donor" do

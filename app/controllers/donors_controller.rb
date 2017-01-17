@@ -28,29 +28,32 @@ class DonorsController < ApplicationController
   def create
     @donor = Donor.new(donor_params)
 
-    respond_to do |format|
+    # respond_to do |format|
       if @donor.save
-        format.html { redirect_to @donor, notice: 'Donor was successfully created.' }
-        format.json { render :show, status: :created, location: @donor }
+        # format.html { redirect_to @donor, notice: 'Donor was successfully created.' }
+        # format.json { render :show, status: :created, location: @donor }
+        render :json => @donor, status: 201
       else
-        format.html { render :new }
-        format.json { render json: @donor.errors, status: :unprocessable_entity }
+        # format.html { render :new }
+        # format.json { render json: @donor.errors, status: :unprocessable_entity }
+        render :json => @donor.errors, status: :unprocessable_entity
       end
-    end
+    # end
   end
 
   # PATCH/PUT /donors/1
   # PATCH/PUT /donors/1.json
   def update
-    respond_to do |format|
+    # respond_to do |format|
       if @donor.update(donor_params)
-        format.html { redirect_to @donor, notice: 'Donor was successfully updated.' }
-        format.json { render :show, status: :ok, location: @donor }
+        # format.html { redirect_to @donor, notice: 'Donor was successfully updated.' }
+        render :json => @donor, status: 201
       else
-        format.html { render :edit }
-        format.json { render json: @donor.errors, status: :unprocessable_entity }
+        # format.html { render :edit }
+        # format.json { render json: @donor.errors, status: :unprocessable_entity }
+        render :json => @donor.errors, status: :unprocessable_entity
       end
-    end
+    # end
   end
 
   # DELETE /donors/1
