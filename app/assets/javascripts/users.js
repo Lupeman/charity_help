@@ -15,19 +15,32 @@ $(document).ready(function() {
       var $firstNameVal = $('#first-name').val();
       var $lastNameVal = $('#last-name').val();
       var $companyNameVal = $('#company-name').val();
+      var $charityNameVal = $('#charity-name').val();
+      var $causeVal = $('#cause').val();
+      var $descriptionVal = $('#description').val();
+      var $locationVal = $('#location').val();
+      var $shippingAddrVal = $('#shipping-addr').val();
 
       var isInvalidUser = _.isEmpty($usernameVal) || _.isEmpty($passwordVal);
-      // var isInvalidDonor = _.isEmpty($firstNameVal) || _.isEmpty($lastNameVal);
 
       var isInvalidDonor;
 
-      if ($('#options-radios2').is(':checked')){
+      if ($('#donor-radio').is(':checked')) {
         isInvalidDonor = _.isEmpty($firstNameVal) || _.isEmpty($lastNameVal);
       } else {
         isInvalidDonor = false;
       }
 
-      if (isInvalidUser || isInvalidDonor) {
+      var isInvalidCharity;
+
+      if ($('#charity-radio').is(':checked')) {
+        isInvalidCharity = _.isEmpty($charityNameVal) || _.isEmpty($causeVal) || _.isEmpty($descriptionVal) || _.isEmpty($locationVal) || _.isEmpty($shippingAddrVal);
+      } else {
+        isInvalidCharity = false;
+      }
+
+
+      if (isInvalidUser || isInvalidDonor || isInvalidCharity) {
         console.log("Empty fields!")
       } else {
         console.log("Register user!")
@@ -60,7 +73,7 @@ $(document).ready(function() {
     $.ajax(settings).done(function(response) {
 
         // once the user is created - I want to create a donor or charity
-        if ($('#options-radios2').is(':checked')) {
+        if ($('#donor-radio').is(':checked')) {
             // create donor
             var json = {
                 "donor": {
@@ -110,6 +123,6 @@ $(document).ready(function() {
     });
 };
 
-$('#options-radios1').on('click', showCharity); $('#options-radios2').on('click', showDonor); $('#register-button').on('click', validateFields);
+$('#charity-radio').on('click', showCharity); $('#donor-radio').on('click', showDonor); $('#register-button').on('click', validateFields);
 
 });
