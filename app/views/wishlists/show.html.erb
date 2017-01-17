@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Charity:</strong>
+  <%= @wishlist.charity %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @wishlist.item_name %>
+</p>
+
+<p>
+  <strong>Item url:</strong>
+  <%= @wishlist.item_url %>
+</p>
+
+<p>
+  <strong>Estimated price:</strong>
+  <%= @wishlist.estimated_price %>
+</p>
+
+<p>
+  <strong>Estimated price:</strong>
+  <%= @wishlist.estimated_price %>
+</p>
+
+<%= link_to 'Edit', edit_wishlist_path(@wishlist) %> |
+<%= link_to 'Back', wishlists_path %>
