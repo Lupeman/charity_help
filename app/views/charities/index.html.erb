@@ -2,7 +2,7 @@
 
 <h1>Charities</h1>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Charity name</th>
@@ -15,9 +15,24 @@
       <th>User</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Charity Cause
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Animals</a></li>
+      <li><a href="#">Homeless</a></li>
+      <li><a href="#">Environmental</a></li>
+      <li><a href="#">Health</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">International NGOs</a></li>
+      <li><a href="#">Arts & Culture</a></li>
+    </ul>
+  </div>
+
+<div id="charities-results"></div>
+  <!-- <tbody>
     <% @charities.each do |charity| %>
       <tr>
         <td><%= charity.charity_name %></td>
@@ -34,8 +49,8 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 
-<%= link_to 'New Charity', new_charity_path %>
+<!-- <%= link_to 'New Charity', new_charity_path %> -->
