@@ -51,9 +51,7 @@ $( document ).ready(function() {
       formData.append("charity[logo]", $('#logo')[0].files[0]);
       formData.append("charity[url]", $('#url').val());
       formData.append("charity[shipping_address]", $('#shipping-addr').val());
-      // {"charity":{"user_id":response.id, "charity_name": $('#charity-name').val(),
-      // "cause": $('#cause').val(), "description": $('#description').val(), "location": $('#location').val(),
-      // "logo": $('#logo')[0].files[0], "url": $('#url').val(), "shipping_address": $('#shipping-addr').val()}};
+
       var settings = {
         url: '/charities',
         method: 'post',
