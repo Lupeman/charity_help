@@ -4,6 +4,9 @@
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+          <p>
+            <%= flash.now[:danger] %>
+          </p>
             <%= form_for(:session, url: login_path) do |f| %>
 
             <%= f.label :username %>

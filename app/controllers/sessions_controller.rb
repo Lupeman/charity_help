@@ -14,9 +14,8 @@ class SessionsController < ApplicationController
       end
     else
       # Create an error message.
-      flash.now[:error] = "Incorrect username or password"
+      flash.now[:danger] = "Incorrect username or password"
       render 'new'
-      # this is not working correctly currently
     end
   end
 end
