@@ -42,15 +42,22 @@ $( document ).ready(function() {
     } else {
 
       // create charity
-      var json = {"charity":{"user_id":response.id, "charity_name": $('#charity-name').val(),
-      "cause": $('#cause').val(), "description": $('#description').val(), "location": $('#location').val(),
-      "logo": $('#logo').val(), "url": $('#url').val(), "shipping_address": $('#shipping-addr').val()}};
-      debugger;
+      var formData = new FormData();
+      formData.append("charity[user_id]", response.id);
+      formData.append("charity[charity_name]", $('#charity-name').val());
+      formData.append("charity[cause]", $('#cause').val());
+      formData.append("charity[description]", $('#description').val());
+      formData.append("charity[location]", $('#location').val());
+      formData.append("charity[logo]", $('#logo')[0].files[0]);
+      formData.append("charity[url]", $('#url').val());
+      formData.append("charity[shipping_address]", $('#shipping-addr').val());
+
       var settings = {
         url: '/charities',
         method: 'post',
-        dataType: 'json',
-        data: json
+        data: formData,
+        contentType: false,
+        processData: false
       };
       // execute ajax to create charity
       $.ajax(settings).done(function() {
