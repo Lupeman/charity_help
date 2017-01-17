@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  charity: one
+  item_name: MyString
+  item_url: MyString
+  estimated_price: 
+  estimated_price: 
+
+two:
+  charity: two
+  item_name: MyString
+  item_url: MyString
+  estimated_price: 
+  estimated_price: 
