@@ -7,11 +7,16 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
-      #redirect to search page?
+      if user.donors.exists?
+        redirect_to donor_path(user)
+      elsif user.charities.exists?
+        redirect_to charity_path(user)
+      end
     else
       # Create an error message.
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:error] = "Incorrect username or password"
       render 'new'
+      # this is not working correctly currently
     end
   end
 end
