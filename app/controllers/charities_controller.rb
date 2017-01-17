@@ -1,6 +1,9 @@
 class CharitiesController < ApplicationController
   before_action :set_charity, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :verify_authenticity_token
+
+
   # GET /charities
   # GET /charities.json
   def index

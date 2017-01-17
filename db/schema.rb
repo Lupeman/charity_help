@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116004731) do
+ActiveRecord::Schema.define(version: 20170117011347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 20170116004731) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "wishlists", force: :cascade do |t|
+    t.integer  "charity_id"
+    t.string   "item_name"
+    t.string   "item_url"
+    t.decimal  "estimated_price", precision: 6, scale: 2
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.index ["charity_id"], name: "index_wishlists_on_charity_id", using: :btree
+  end
+
   add_foreign_key "charities", "users"
   add_foreign_key "donors", "users"
+  add_foreign_key "wishlists", "charities"
 end
