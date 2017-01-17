@@ -21,8 +21,10 @@ $(document).ready(function() {
       var $locationVal = $('#location').val();
       var $shippingAddrVal = $('#shipping-addr').val();
 
+      // check if the user fields are empty
       var isInvalidUser = _.isEmpty($usernameVal) || _.isEmpty($passwordVal);
 
+      // check if the donor fields are empty
       var isInvalidDonor;
 
       if ($('#donor-radio').is(':checked')) {
@@ -31,6 +33,7 @@ $(document).ready(function() {
         isInvalidDonor = false;
       }
 
+      // check if the charity fields are empty
       var isInvalidCharity;
 
       if ($('#charity-radio').is(':checked')) {
@@ -41,25 +44,20 @@ $(document).ready(function() {
 
 
       if (isInvalidUser || isInvalidDonor || isInvalidCharity) {
-        console.log("Empty fields!")
+        $('#error-msg').removeClass('hide');
       } else {
-        console.log("Register user!")
+        $('#error-msg').addClass('hide');
         registerUser();
       }
     };
 
     var registerUser = function() {
-      var $usernameVal = $('#username').val();
-      var $passwordVal = $('#password').val();
-      var $firstNameVal = $('#first-name').val();
-      var $lastNameVal = $('#last-name').val();
-      var $companyNameVal = $('#company-name').val()
 
         // create user
         var json = {
             "user": {
-                "username": $usernameVal,
-                "password": $passwordVal
+                "username": $('#username').val(),
+                "password": $('#password').val()
             }
         };
         var settings = {
@@ -78,9 +76,9 @@ $(document).ready(function() {
             var json = {
                 "donor": {
                     "user_id": response.id,
-                    "first_name": $firstNameVal,
-                    "last_name": $lastNameVal,
-                    "company_name": $companyNameVal
+                    "first_name": $('#first-name').val(),
+                    "last_name": $('#last-name').val(),
+                    "company_name": $('#company-name').val()
                 }
             };
             var settings = {
