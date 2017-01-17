@@ -45,6 +45,7 @@ $( document ).ready(function() {
       var json = {"charity":{"user_id":response.id, "charity_name": $('#charity-name').val(),
       "cause": $('#cause').val(), "description": $('#description').val(), "location": $('#location').val(),
       "logo": $('#logo').val(), "url": $('#url').val(), "shipping_address": $('#shipping-addr').val()}};
+      debugger;
       var settings = {
         url: '/charities',
         method: 'post',
