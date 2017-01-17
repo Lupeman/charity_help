@@ -3,10 +3,11 @@
   font-weight: bold;
 }
 
-.error-message {
+#error-message {
+  color: red;
   visibility: hidden;
 }
 
-.error {
-  color: red;
+#error-message.error {
+  visibility: visible;
 }

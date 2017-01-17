@@ -14,7 +14,6 @@ var findCharityWithCause = function(e){
   }
 
   $.ajax(settings).done(function(response) {
-    debugger
     var charities = response;
     _.each(charities, function(charity){
       if(cause == charity.cause){
@@ -22,7 +21,7 @@ var findCharityWithCause = function(e){
       }
     });
     if(storeCharityWithCause.length == 0){
-      $('.error-message').toggleClass('error')
+      $('#error-message').toggleClass('error')
     }
   });
 }
@@ -43,16 +42,30 @@ var findCharityWithLocation = function(e){
         storeCharityWithLocation.push(charity)
       }
     });
-    if(storeCharityWithLocation.length = 0){
-      $('.error-message').toggleClass('error')
+    if(storeCharityWithLocation.length == 0){
+      $('#error-message').toggleClass('error')
+    }
+  });
+  findCharityMatch();
+}
+
+
+var findCharityMatch = function(){
+  _.each(storeCharityWithCause, function(charity){
+    var charity = charity;
+    if(charity.location == charityDetails[1]){
+      $('#charities-results').append(charity.charity_name, charity.description)
+
     }
   });
 }
 
-
 $('#cause').on('click', findCharityWithCause);
 $('#location').on('click', findCharityWithLocation);
+
 });
+
+
 
 // if(charity.cause == charityDetails[0] && charity.location == charityDetails[1]){ charitySearchResults.push(charity)
 // }else{
