@@ -1,44 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Charity name:</strong>
-  <%= @charity.charity_name %>
-</p>
+<div id="profile"></div>
 
-<p>
-  <strong>Cause:</strong>
-  <%= @charity.cause %>
-</p>
+  <input type="hidden" id="charity_id" value="<%= @charity.id %>" />
+  <input type="text" id="item_name" placeholder="Item Name"/>
+  <input type="text" id="item_url" placeholder="Item URL"  />
+  <input type="text" id="estimated_price" placeholder="Est. Price"  />
+  <button id="addwishlistbutton">Add!</button>
 
-<p>
-  <strong>Description:</strong>
-  <%= @charity.description %>
-</p>
+<div id="list"></div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @charity.location %>
-</p>
+<script src="/javascript/templates.js" charset="utf-8"></script>
+<script src="/javascript/models/wish.js" charset="utf-8"></script>
+<script src="/javascript/collections/wishes.js" charset="utf-8"></script>
+<script src="/javascript/views/WishView.js" charset="utf-8"></script>
+<script src="/javascript/views/WishItemView.js" charset="utf-8"></script>
+<script src="/javascript/models/charityprofile.js"></script>
+<script src="/javascript/views/CharityprofileView.js" charset="utf-8"></script>
 
-<p>
-  <strong>Logo:</strong>
-  <%= @charity.logo %>
-</p>
+<script>
+    var charityprofile = new Charityprofile({ id: <%= @charity.id %> })
+    charityprofile.fetch();
 
-<p>
-  <strong>Url:</strong>
-  <%= @charity.url %>
-</p>
+    var wishes = new Wishes();
+    wishes.reset(<%= raw(@charity.wishlists.to_json) %>)
+</script>
 
-<p>
-  <strong>Shipping address:</strong>
-  <%= @charity.shipping_address %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @charity.user %>
-</p>
+<script src="/javascript/app.js" charset="utf-8"></script>
 
 <%= link_to 'Edit', edit_charity_path(@charity) %> |
 <%= link_to 'Back', charities_path %>

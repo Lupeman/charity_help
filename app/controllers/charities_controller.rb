@@ -18,6 +18,7 @@ class CharitiesController < ApplicationController
   # GET /charities/1
   # GET /charities/1.json
   def show
+    @charity = Charity.find_by(id: params[:id])
   end
 
   # GET /charities/new
