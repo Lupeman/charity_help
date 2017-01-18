@@ -50,6 +50,7 @@ var findCharityWithLocation = function(e){
 
 
 var findCharityMatch = function(){
+  var fragment = document.createDocumentFragment();
   _.each(storeCharityWithCause, function(charity){
     if(charity.location == charityDetails[1]){
       var html = Handlebars.templates.charity({
@@ -58,9 +59,10 @@ var findCharityMatch = function(){
         description: charity.description,
         url: charity.logo.url
       })
-      $('#charities-results').append(html);
+      $(fragment).append(html);
     }
   });
+  $('#charities-results').append(fragment);
 }
 
   $('.charity_search_btn').on('click', findCharityMatch);
