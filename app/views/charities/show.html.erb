@@ -1,58 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Charity name:</strong>
-  <%= @charity.charity_name %>
-</p>
+<div id="profile"></div>
 
-<p>
-  <strong>Cause:</strong>
-  <%= @charity.cause %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @charity.description %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @charity.location %>
-</p>
-
-<p>
-  <strong>Logo:</strong>
-  <%= @charity.logo %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @charity.url %>
-</p>
-
-<p>
-  <strong>Shipping address:</strong>
-  <%= @charity.shipping_address %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @charity.user %>
-</p>
-
-
-
-<div id="list">
-
-</div>
+<div id="list"></div>
 
 <script src="/javascript/templates.js" charset="utf-8"></script>
 <script src="/javascript/models/wish.js" charset="utf-8"></script>
 <script src="/javascript/collections/wishes.js" charset="utf-8"></script>
 <script src="/javascript/views/WishView.js" charset="utf-8"></script>
 <script src="/javascript/views/WishItemView.js" charset="utf-8"></script>
+<script src="/javascript/models/charityprofile.js"></script>
+<script src="/javascript/views/CharityprofileView.js" charset="utf-8"></script>
 
 <script>
+    var charityprofile = new Charityprofile({ id: <%= @charity.id %> })
+    charityprofile.fetch();
+
     var wishes = new Wishes();
     wishes.reset(<%= raw(@charity.wishlists.to_json) %>)
 </script>

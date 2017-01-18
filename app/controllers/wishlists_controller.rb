@@ -12,8 +12,9 @@ class WishlistsController < ApplicationController
   def show
   end
 
-  # GET /wishlists/new
+  # GET /charities/:id/wishlists/new
   def new
+    @charity = Charity.find(params[:charity_id])
     @wishlist = Wishlist.new
   end
 
