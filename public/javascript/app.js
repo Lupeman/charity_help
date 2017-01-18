@@ -6,7 +6,7 @@ var profileview = new CharityprofileView({
     model: charityprofile
 });
 
-$('#list').append(view.render().el);
+$('#list').html(view.render().el);
 
 
 function addWish() {
@@ -15,7 +15,7 @@ function addWish() {
         item_name: $('#item_name').val(),
         item_url: $('#item_url').val(),
         estimated_price: $('#estimated_price').val()
-    };    
+    };
     wishes.create({ wishlist });
 }
 
