@@ -40,5 +40,24 @@
   <%= @charity.user %>
 </p>
 
+
+
+<div id="list">
+
+</div>
+
+<script src="/javascript/templates.js" charset="utf-8"></script>
+<script src="/javascript/models/wish.js" charset="utf-8"></script>
+<script src="/javascript/collections/wishes.js" charset="utf-8"></script>
+<script src="/javascript/views/WishView.js" charset="utf-8"></script>
+<script src="/javascript/views/WishItemView.js" charset="utf-8"></script>
+
+<script>
+    var wishes = new Wishes();
+    wishes.reset(<%= raw(@charity.wishlists.to_json) %>)
+</script>
+
+<script src="/javascript/app.js" charset="utf-8"></script>
+
 <%= link_to 'Edit', edit_charity_path(@charity) %> |
 <%= link_to 'Back', charities_path %>
