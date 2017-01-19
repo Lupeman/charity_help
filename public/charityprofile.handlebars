@@ -1,10 +1,14 @@
+{{ profileEditable }}
+{{ profileEditableString }}
+
+
 <div class="container">
 
   <div class="container">
-    <h1 id="charity_name" class="text-center" contenteditable="true"> {{ charity_name }} </h1>
+    <h1 id="charity_name" class="text-center" contenteditable={{ profileEditable }}> {{ charity_name }} </h1>
     <p class="text-center"><a id="url" href="{{ charity_website }}"> {{ charity_website }} </a></p>
-    <p id="description" class="text-center" contenteditable="true"> {{ description }} </p>
-    <p id="shipping_address" class="text-center" contenteditable="true"> {{ shipping_address }} </p>
+    <p id="description" class="text-center" contenteditable={{ profileEditableString }}> {{ description }} </p>
+    <p id="shipping_address" class="text-center" contenteditable="{{#if profileEditable}}true{{else}}false{{/if}}"> {{ shipping_address }} </p>
   </div>
 
   <div class="container">

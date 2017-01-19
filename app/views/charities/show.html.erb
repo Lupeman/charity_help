@@ -45,7 +45,10 @@
     charityprofile.fetch();
 
     var wishes = new Wishes();
-    wishes.reset(<%= raw(@charity.wishlists.to_json) %>)
+    wishes.reset(<%= raw(@charity.wishlists.to_json) %>);
+
+    var profileEditable = <%= @profile_editable %>;
+    var profileEditableString = profileEditable.toString();
 </script>
 
 <script src="/javascript/app.js" charset="utf-8"></script>

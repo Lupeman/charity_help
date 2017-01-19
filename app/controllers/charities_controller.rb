@@ -20,6 +20,10 @@ class CharitiesController < ApplicationController
   # GET /charities/1.json
   def show
     @charity = Charity.find_by(id: params[:id])
+    @profile_editable = false
+    if @charity.user_id == current_user.id
+      @profile_editable = true
+    end
   end
 
   # GET /charities/new
