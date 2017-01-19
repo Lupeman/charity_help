@@ -1,5 +1,26 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['wish'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<!-- <div class=\"container\">\n\n  <div class=\"row\">\n\n    <div class=\"col-md-3\">\n      &nbsp;\n    </div>\n\n    <div class=\"col-md-6\">\n      <input type=\"radio\" name=\"wish\" value=\""
+    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\" />  <strong>"
+    + alias4(((helper = (helper = helpers.item_name || (depth0 != null ? depth0.item_name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item_name","hash":{},"data":data}) : helper)))
+    + "</strong>\n      <br/ > "
+    + alias4(((helper = (helper = helpers.item_url || (depth0 != null ? depth0.item_url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item_url","hash":{},"data":data}) : helper)))
+    + "\n    </div>\n\n    <div class=\"wishlist col-md-3\">\n       $"
+    + alias4(((helper = (helper = helpers.estimated_price || (depth0 != null ? depth0.estimated_price : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"estimated_price","hash":{},"data":data}) : helper)))
+    + "\n    </div>\n\n  </div>\n\n</div> -->\n\n\n<div class=\"container\">\n\n  <div class=\"row\">\n\n    <!-- <div class=\"col-md-3\">\n      &nbsp;\n    </div> -->\n\n    <div class=\"col-sm-offset-3 col-sm-4\">\n      <input type=\"radio\" name=\"wish\" value=\""
+    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\" />  <strong>&nbsp;"
+    + alias4(((helper = (helper = helpers.item_name || (depth0 != null ? depth0.item_name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item_name","hash":{},"data":data}) : helper)))
+    + "</strong>\n      <br/ >&nbsp;"
+    + alias4(((helper = (helper = helpers.item_url || (depth0 != null ? depth0.item_url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item_url","hash":{},"data":data}) : helper)))
+    + "\n    </div>\n\n    <div class=\"wishlist col-sm-offset-1 col-md-2\">\n       $"
+    + alias4(((helper = (helper = helpers.estimated_price || (depth0 != null ? depth0.estimated_price : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"estimated_price","hash":{},"data":data}) : helper)))
+    + "\n    </div>\n\n  </div>\n\n</div>\n";
+},"useData":true});
 templates['charity'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -18,9 +39,9 @@ templates['charityprofile'] = template({"compiler":[7,">= 4.0.0"],"main":functio
 
   return "<div class=\"container\">\n\n  <div class=\"container\">\n    <h1 id=\"charity_name\" class=\"text-center\" contenteditable=\"true\"> "
     + alias4(((helper = (helper = helpers.charity_name || (depth0 != null ? depth0.charity_name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"charity_name","hash":{},"data":data}) : helper)))
-    + " </h1>\n    <p class=\"text-center\"><a id=\"url\" href=\""
+    + " </h1>\n    <p class=\"text-center\"><a href=\"http://"
     + alias4(((helper = (helper = helpers.charity_website || (depth0 != null ? depth0.charity_website : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"charity_website","hash":{},"data":data}) : helper)))
-    + "\"> "
+    + "\" id=\"url\"> "
     + alias4(((helper = (helper = helpers.charity_website || (depth0 != null ? depth0.charity_website : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"charity_website","hash":{},"data":data}) : helper)))
     + " </a></p>\n    <p id=\"description\" class=\"text-center\" contenteditable=\"true\"> "
     + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
@@ -29,18 +50,5 @@ templates['charityprofile'] = template({"compiler":[7,">= 4.0.0"],"main":functio
     + " </p>\n  </div>\n\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"img-responsive text-center\">\n        <img src=\""
     + alias4(container.lambda(((stack1 = (depth0 != null ? depth0.logo : depth0)) != null ? stack1.url : stack1), depth0))
     + "\" alt=\"charity_logo\" class=\"img-rounded center-block\">\n      </div>\n    </div>\n  </div>\n\n</div>\n";
-},"useData":true});
-templates['wish'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
-
-  return "<div class=\"container\">\n\n  <div class=\"row\">\n    <div class=\"col-md-3\">\n      <input type=\"radio\" name=\"wish\" value=\""
-    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\" /> <strong>"
-    + alias4(((helper = (helper = helpers.item_name || (depth0 != null ? depth0.item_name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item_name","hash":{},"data":data}) : helper)))
-    + "</strong>\n    </div>\n\n    <div class=\"wishlist col-md-3\">\n      "
-    + alias4(((helper = (helper = helpers.item_url || (depth0 != null ? depth0.item_url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item_url","hash":{},"data":data}) : helper)))
-    + "\n    </div>\n\n    <div class=\"wishlist col-md-3\">\n       $"
-    + alias4(((helper = (helper = helpers.estimated_price || (depth0 != null ? depth0.estimated_price : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"estimated_price","hash":{},"data":data}) : helper)))
-    + "\n    </div>\n\n  </div>\n\n</div>\n";
 },"useData":true});
 })();
