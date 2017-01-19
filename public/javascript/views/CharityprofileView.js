@@ -3,7 +3,7 @@ var CharityprofileView = Backbone.View.extend({
   events: {
   // event on class as per handlebars template
   'focusout .charity_name': 'updateModel',
-  'focusout .url': 'updateModel',
+  'focusout .charity_website': 'updateModel',
   'focusout .description': 'updateModel',
   'focusout .shipping_address': 'updateModel'
   },
