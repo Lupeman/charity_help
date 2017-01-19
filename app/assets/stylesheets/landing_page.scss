@@ -9,46 +9,7 @@ html, body {
 
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
-.navbar {
-  background-color: #00bcd4;
-  height:75px;
-  margin: 0;
-  border: none;
-}
-.navbar-text {
-  font-size: 40px;
-  margin-top: 30px;
-}
-
-.navbar-default .navbar-text, .navbar-default .navbar-nav>li>a {
-  color: #222224;
-  font-family: 'Poppins', sans-serif;
-}
-
-.navbar-default .navbar-nav>li>a:hover{
-  color: #FF6E00;
-}
-
-.navbar-nav {
-  margin-left: 650px;
-}
-.links {
-  margin-top: 15px;
-}
-
-.hamburger-icon {
-  height: 60px;
-  margin-top: -20px;
-  padding-left: 20px;
-}
-.logo {
-  float:left;
-  height: 60px;
-  margin-top: -8px;
-  margin-left: 70px;
-}
+ @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 .jumbotron {
   // margin-bottom: 200px;
@@ -235,12 +196,3 @@ footer {
   float:right;
   margin-top: -60px;
   }
-
-@media screen and (max-width: 900px) {
-  .jumbotron p {
-    font-size: 30px;
-  .section3 p {
-    font-size: 20px;
-  }
-  }
-}

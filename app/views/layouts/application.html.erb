@@ -17,18 +17,19 @@
     <div class="header">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-          <div class="row">
+          <div class="row nav-style">
             <div class="col-md-9">
               <a class="navbar-brand" href="/">
                 <%= image_tag('logo2.png', class: "logo") %>
               </a>
               <h1 class="navbar-text">But Nothing!</h1>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 nav_links">
               <% if logged_in? %>
-                <form action="/index" method="post" class="logout_link">
+                <form action="/logout/<%= current_user.id %>" method="post" class="logout_link">
                   <input type="hidden" name="_method" value="delete" />
-                    <p class="logoutLink">Log Out</p>
+                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                  <button class="logoutLink">Log Out</button>
                 </form>
               <% else %>
                 <a class="links" href="/users/new">Sign Up</a>

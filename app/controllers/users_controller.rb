@@ -4,15 +4,6 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :require_login, only: [:new, :create]
 
-  helpers do
-    def logged_in?
-      !!current_user
-    end
-
-    def current_user
-      User.find_by(id: session[:user_id])
-    end
-  end
   # GET /users
   # GET /users.json
   def index
@@ -71,8 +62,9 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
+
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
