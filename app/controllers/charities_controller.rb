@@ -66,16 +66,19 @@ class CharitiesController < ApplicationController
   # PATCH/PUT /charities/1
   # PATCH/PUT /charities/1.json
   def update
-    respond_to do |format|
-      if @charity.update(charity_params)
-        format.html { redirect_to @charity, notice: 'Charity was successfully updated.' }
-        format.json { render :show, status: :ok, location: @charity }
-      else
-        format.html { render :edit }
-        format.json { render json: @charity.errors, status: :unprocessable_entity }
+    if current_user.charities.exists? && current_user.charity_ids == params[:id]
+      respond_to do |format|
+        if @charity.update(charity_params)
+          format.html { redirect_to @charity, notice: 'Charity was successfully updated.' }
+          format.json { render :show, status: :ok, location: @charity }
+        else
+          format.html { render :edit }
+          format.json { render json: @charity.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
+  # TODO better error handling here
 
   # DELETE /charities/1
   # DELETE /charities/1.json
