@@ -4,11 +4,7 @@
 
 <div class="container">
 
-    <!-- <div class="col-xs-6 col-sm-3">
-        &nbsp;
-    </div> -->
-
-    <form class="form-horizontal">
+    <div class="form-horizontal wishlist-add" id="wishlist-add-table">
         <div class="form-group">
             <input type="hidden" id="charity_id" value="<%= @charity.id %>"/>
 
@@ -47,27 +43,16 @@
             </div>
         </div>
 
-    </form>
+    </div>
 
 </div>
 
 <div class="container">
     <h3 class="text-center">Our Wishlist</h3>
+
 </div>
 
 <div id="list-container"></div>
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            &nbsp;
-        </div>
-
-        <div class="col-md-4">
-            <button class="btn btn-primary" id="removefromwishlistbutton">I've donated this!</button>
-        </div>
-    </div>
-</div> -->
 
 <div class="container">
   <div class="form-group">
@@ -90,7 +75,13 @@
     charityprofile.fetch();
 
     var wishes = new Wishes();
-    wishes.reset(<%= raw(@charity.wishlists.to_json) %>)
+    wishes.reset(<%= raw(@charity.wishlists.to_json) %>);
+
+    var profileEditable = <%= @profile_editable %>;
+    var profileEditableString = profileEditable.toString();
+
+    var donorView = <%= @donorview %>
+
 </script>
 
 <script src="/javascript/app.js" charset="utf-8"></script>

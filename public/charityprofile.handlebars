@@ -1,10 +1,12 @@
 <div class="container">
 
   <div class="container">
-    <h1 id="charity_name" class="text-center" contenteditable="true"> {{ charity_name }} </h1>
-    <p class="text-center"><a href="http://{{ charity_website }}" id="url"> {{ charity_website }} </a></p>
-    <p id="description" class="text-center" contenteditable="true"> {{ description }} </p>
-    <p id="shipping_address" class="text-center" contenteditable="true"> {{ shipping_address }} </p>
+
+    <h1 id="charity_name" class="text-center" contenteditable="{{ isProfileEditable }}"> {{ charity_name }} </h1>
+    <p class="text-center"><a id="url" href="{{ charity_website }}"> {{ charity_website }} </a></p>
+    <p id="description" class="text-center" contenteditable={{ isProfileEditable }}> {{ description }} </p>
+    <p id="shipping_address" class="text-center" contenteditable="{{ isProfileEditable }}"> {{ shipping_address }} </p>
+
   </div>
 
   <div class="container">

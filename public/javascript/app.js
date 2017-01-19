@@ -6,6 +6,10 @@ var profileview = new CharityprofileView({
     model: charityprofile
 });
 
+Handlebars.registerHelper( "isProfileEditable", function (block){
+    return profileEditableString;
+});
+
 $('#list-container').html(view.render().el);
 
 
@@ -20,8 +24,6 @@ function addWish() {
 }
 
 
-function removeWish(wishid) {
-}
 
 $('#removefromwishlistbutton').click(function() {
     var inputVal = $("input[name='wish']:checked").val();
@@ -31,3 +33,20 @@ $('#removefromwishlistbutton').click(function() {
 
 
 $('#addwishlistbutton').on('click', addWish);
+
+function hideWishlist() {
+  if (profileEditable === false) {
+    $('#wishlist-add-table').addClass("hidden");
+  }
+}
+
+hideWishlist();
+
+function hidePurchasing() {
+  if (donorView === false) {
+    $('#removefromwishlistbutton').addClass('hidden');
+    $('input:radio').hide();
+  }
+}
+
+hidePurchasing();

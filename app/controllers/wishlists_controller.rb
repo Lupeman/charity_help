@@ -25,10 +25,11 @@ class WishlistsController < ApplicationController
   # POST /wishlists
   # POST /wishlists.json
   def create
-    @wishlist = Wishlist.new(wishlist_params)
-
-    if @wishlist.save
-      render json: @wishlist
+    if current_user.charities.exists && current_user.charities.ids[0] == wishlist_params["charity_id"].to_i
+      @wishlist = Wishlist.new(wishlist_params)
+        if @wishlist.save
+          render json: @wishlist
+        end
     end
   end
 
@@ -49,9 +50,11 @@ class WishlistsController < ApplicationController
   # DELETE /wishlists/1
   # DELETE /wishlists/1.json
   def destroy
-    @wishlist.destroy
-    respond_to do |format|
-      format.json { head :no_content }
+    if current_user.donors.exists? || (current_user.charities.exists? && current_user.charity_ids[0] == @wishlist.charity_id)
+      @wishlist.destroy
+      respond_to do |format|
+        format.json { head :no_content }
+      end
     end
   end
 
