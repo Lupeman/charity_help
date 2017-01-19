@@ -1,6 +1,6 @@
 var charityDetails = [];
 var storeCharityWithCause = [];
-var storeCharityWithLocation = [];
+// var storeCharityWithLocation = [];
 var charitySearchResults = [];
 
 $(document).ready(function(){
@@ -29,39 +29,47 @@ var findCharityWithCause = function(e){
 
 var findCharityWithLocation = function(e){
   var location = e.target.innerHTML;
-    charityDetails.push(location);
-    var settings = {
-      url: '/charities.json',
-      method: 'get'
-    }
-
-  $.ajax(settings).done(function(response) {
-    var charities = response;
-    _.each(charities, function(charity){
-      if(location == charity.location){
-        storeCharityWithLocation.push(charity)
-      }
-    });
-    if(storeCharityWithLocation.length == 0){
-      $('#error-message').toggleClass('error')
-    }
-  });
-  findCharityMatch();
+  charityDetails.push(location);
+    // var settings = {
+    //   url: '/charities.json',
+    //   method: 'get'
+    // }
+  //
+  // $.ajax(settings).done(function(response) {
+  //   var charities = response;
+  //   _.each(charities, function(charity){
+  //     if(location == charity.location){
+  //       storeCharityWithLocation.push(charity)
+  //     }
+  //   });
+  //   if(storeCharityWithLocation.length == 0){
+  //     $('#error-message').toggleClass('error')
+  //   }
+  // });
 }
 
 
 var findCharityMatch = function(){
+  var fragment = document.createDocumentFragment();
   _.each(storeCharityWithCause, function(charity){
-    var charity = charity;
     if(charity.location == charityDetails[1]){
-      $('#charities-results').append(charity.charity_name, charity.description)
-
+      var html = Handlebars.templates.charity({
+        id: charity.id,
+        name: charity.charity_name,
+        description: charity.description,
+        url: charity.logo.url
+      })
+      $(fragment).append(html);
     }
   });
+  $('#charities-results').append(fragment);
 }
 
-$('#cause').on('click', findCharityWithCause);
-$('#location').on('click', findCharityWithLocation);
+  $('.charity_search_btn').on('click', findCharityMatch);
+
+
+  $('#cause').on('click', findCharityWithCause);
+  $('#location').on('click', findCharityWithLocation);
 
 });
 
