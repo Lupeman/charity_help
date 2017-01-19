@@ -3,6 +3,15 @@ class UsersController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
+  helpers do
+    def logged_in?
+      !!current_user
+    end
+
+    def current_user
+      User.find_by(id: session[:user_id])
+    end
+  end
   # GET /users
   # GET /users.json
   def index
