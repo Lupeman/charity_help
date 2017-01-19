@@ -67,8 +67,10 @@ $(document).ready(function() {
             data: json
         };
 
+
     // execute ajax post to create user
     $.ajax(settings).done(function(response) {
+
 
         // once the user is created - I want to create a donor or charity
         if ($('#donor-radio').is(':checked')) {
@@ -113,10 +115,13 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false
             };
+
             // execute ajax to create charity
-            $.ajax(settings).done(function() {
+            $.ajax(settings)
+            .done(function(response) {
                 $('#success-msg').removeClass('hide');
-            });
+                window.location = '/charities/' + response.id
+            })
         }
     });
 };
