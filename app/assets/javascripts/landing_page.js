@@ -51,3 +51,13 @@ $(document).ready(function(){
   $('#enquire-now-tab').on('click', showEnquireNow);
 
 })
+
+// Open overlay
+function openOverlay() {
+    document.getElementById("charity-overlay").style.height = "100%";
+}
+
+// Close overlay
+function closeOverlay() {
+    document.getElementById("charity-overlay").style.height = "0%";
+}
