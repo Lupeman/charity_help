@@ -6,7 +6,7 @@ var profileview = new CharityprofileView({
     model: charityprofile
 });
 
-$('#list').html(view.render().el);
+$('#list-container').html(view.render().el);
 
 
 function addWish() {
