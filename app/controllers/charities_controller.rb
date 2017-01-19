@@ -20,6 +20,14 @@ class CharitiesController < ApplicationController
   # GET /charities/1.json
   def show
     @charity = Charity.find_by(id: params[:id])
+    @profile_editable = false
+    if @charity.user_id == current_user.id
+      @profile_editable = true
+    end
+    @donorview = false
+    if current_user.donors.exists?
+      @donorview = true
+    end
   end
 
   # GET /charities/new
@@ -62,16 +70,19 @@ class CharitiesController < ApplicationController
   # PATCH/PUT /charities/1
   # PATCH/PUT /charities/1.json
   def update
-    respond_to do |format|
-      if @charity.update(charity_params)
-        format.html { redirect_to @charity, notice: 'Charity was successfully updated.' }
-        format.json { render :show, status: :ok, location: @charity }
-      else
-        format.html { render :edit }
-        format.json { render json: @charity.errors, status: :unprocessable_entity }
+    if current_user.charities.exists? && current_user.charity_ids == params[:id]
+      respond_to do |format|
+        if @charity.update(charity_params)
+          format.html { redirect_to @charity, notice: 'Charity was successfully updated.' }
+          format.json { render :show, status: :ok, location: @charity }
+        else
+          format.html { render :edit }
+          format.json { render json: @charity.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
+  # TODO better error handling here
 
   # DELETE /charities/1
   # DELETE /charities/1.json
@@ -86,7 +97,7 @@ class CharitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_charity
-      @charity = Charity.find(params[:id])
+      @charity = Charity.find_by(user_id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

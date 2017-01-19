@@ -1,5 +1,5 @@
 body {
-  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 a:link {
@@ -8,4 +8,24 @@ a:link {
 
 .wishlist-add {
   width: 600px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+h1 {
+  font-family: 'Poppins';
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Francois';
+  padding: 5px;
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
 }

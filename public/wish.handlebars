@@ -1,15 +1,39 @@
+<!-- <div class="container">
+
+  <div class="row">
+
+    <div class="col-md-3">
+      &nbsp;
+    </div>
+
+    <div class="col-md-6">
+      <input type="radio" name="wish" value="{{ id }}" />  <strong>{{ item_name }}</strong>
+      <br/ > {{ item_url }}
+    </div>
+
+    <div class="wishlist col-md-3">
+       ${{ estimated_price }}
+    </div>
+
+  </div>
+
+</div> -->
+
+
 <div class="container">
 
   <div class="row">
-    <div class="col-md-3">
-      <input type="radio" name="wish" value="{{ id }}" /> <strong>{{ item_name }}</strong>
+
+    <!-- <div class="col-md-3">
+      &nbsp;
+    </div> -->
+
+    <div class="col-sm-offset-3 col-sm-4">
+      <input type="radio" name="wish" value="{{ id }}" />  <strong>&nbsp;{{ item_name }}</strong>
+      <br/ >&nbsp;{{ item_url }}
     </div>
 
-    <div class="wishlist col-md-3">
-      {{ item_url }}
-    </div>
-
-    <div class="wishlist col-md-3">
+    <div class="wishlist col-sm-offset-1 col-md-2">
        ${{ estimated_price }}
     </div>
 
