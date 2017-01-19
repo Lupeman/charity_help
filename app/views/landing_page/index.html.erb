@@ -1,3 +1,13 @@
+<!-- The overlay -->
+<div id="charity-overlay" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" style="text-decoration: none" onclick="closeOverlay()">&times;</a>
+
+  <!-- Overlay content -->
+  <div id="overlay-content" class="overlay-content"></div>
+
+</div>
 
 <div class="header">
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -15,9 +25,7 @@
             <a class="links" href="/login">Login</a>
           </li>
           <li class="links">
-            <a href="#">
-            <%= image_tag('hamburger.png', class: "hamburger-icon") %>
-            </a>
+            <a><span onclick="openOverlay()" class="glyphicon glyphicon-menu-hamburger"></span></a>
           </li>
         </ul>
       </div>
@@ -40,8 +48,6 @@
       <p>So we've done all the heavy lifting and brought a world of charities to you!</p>
     </div>
 </section>
-
-
 
 
 <div class="container">
