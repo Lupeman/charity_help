@@ -6,6 +6,10 @@ var profileview = new CharityprofileView({
     model: charityprofile
 });
 
+Handlebars.registerHelper( "isProfileEditable", function (block){
+    return profileEditableString;
+});
+
 $('#list-container').html(view.render().el);
 
 
