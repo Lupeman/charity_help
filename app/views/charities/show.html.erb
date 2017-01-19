@@ -2,7 +2,16 @@
 
 <div id="profile"></div>
 
-<div id="list"></div>
+  <input type="hidden" id="charity_id" value="<%= @charity.id %>" />
+  <input type="text" id="item_name" placeholder="Item Name"/>
+  <input type="text" id="item_url" placeholder="Item URL"  />
+  <input type="text" id="estimated_price" placeholder="Est. Price"  />
+  <button id="addwishlistbutton">Add!</button>
+
+<div id="list-container">
+
+</div>
+<button id="removefromwishlistbutton">I've purchased this!</button>
 
 <script src="/javascript/templates.js" charset="utf-8"></script>
 <script src="/javascript/models/wish.js" charset="utf-8"></script>
@@ -21,6 +30,3 @@
 </script>
 
 <script src="/javascript/app.js" charset="utf-8"></script>
-
-<%= link_to 'Edit', edit_charity_path(@charity) %> |
-<%= link_to 'Back', charities_path %>
