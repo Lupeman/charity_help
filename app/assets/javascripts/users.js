@@ -103,7 +103,7 @@ $(document).ready(function() {
             formData.append("charity[description]", $('#description').val());
             formData.append("charity[location]", $('#location').val());
             formData.append("charity[logo]", $('#logo')[0].files[0]);
-            formData.append("charity[url]", $('#url').val());
+            formData.append("charity[charity_website]", $('#url').val());
             formData.append("charity[shipping_address]", $('#shipping-addr').val());
 
             var settings = {
