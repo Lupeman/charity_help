@@ -24,6 +24,10 @@ class CharitiesController < ApplicationController
     if @charity.user_id == current_user.id
       @profile_editable = true
     end
+    @donorview = false
+    if current_user.donors.exists?
+      @donorview = true
+    end
   end
 
   # GET /charities/new
@@ -93,7 +97,7 @@ class CharitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_charity
-      @charity = Charity.find(params[:id])
+      @charity = Charity.find_by(user_id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
