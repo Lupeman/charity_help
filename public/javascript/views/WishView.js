@@ -1,5 +1,4 @@
 var WishView = Backbone.View.extend({
-  tagName: 'ul',
 
   render: function() {
     this.$el.html('');

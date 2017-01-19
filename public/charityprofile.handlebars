@@ -1,9 +1,18 @@
-<h1> {{ charity_name }} </h1>
+<div class="container">
 
-<a href="{{ url }}">Charity Website</a>
+  <div class="container">
+    <h1 id="charity_name" class="text-center" contenteditable="true"> {{ charity_name }} </h1>
+    <p class="text-center"><a id="url" href="{{ charity_website }}"> {{ charity_website }} </a></p>
+    <p id="description" class="text-center" contenteditable="true"> {{ description }} </p>
+    <p id="shipping_address" class="text-center" contenteditable="true"> {{ shipping_address }} </p>
+  </div>
 
-<p> {{ cause }} </p>
+  <div class="container">
+    <div class="row">
+      <div class="img-responsive text-center">
+        <img src="{{ logo.url }}" alt="charity_logo" class="img-rounded center-block">
+      </div>
+    </div>
+  </div>
 
-<p> {{ description }} </p>
-
-<p> {{ shipping_address }} </p>
+</div>

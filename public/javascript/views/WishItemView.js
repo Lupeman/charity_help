@@ -1,7 +1,5 @@
 var WishItemView = Backbone.View.extend({
 
-  tagName: 'li',
-
   initialize: function() {
     // this.listenTo(this.model, 'change:name', this.render);
   },

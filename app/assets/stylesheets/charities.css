@@ -1,0 +1,11 @@
+body {
+  padding-top: 50px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.wishlist-add {
+  width: 600px;
+}
