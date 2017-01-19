@@ -6,7 +6,7 @@ var profileview = new CharityprofileView({
     model: charityprofile
 });
 
-$('#list').html(view.render().el);
+$('#list-container').html(view.render().el);
 
 
 function addWish() {
@@ -18,6 +18,16 @@ function addWish() {
     };
     wishes.create({ wishlist });
 }
+
+
+function removeWish(wishid) {
+}
+
+$('#removefromwishlistbutton').click(function() {
+    var inputVal = $("input[name='wish']:checked").val();
+    var selectedWish = wishes.get(inputVal);
+    selectedWish.destroy();
+});
 
 
 $('#addwishlistbutton').on('click', addWish);

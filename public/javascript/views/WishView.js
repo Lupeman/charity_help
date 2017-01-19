@@ -1,6 +1,5 @@
 var WishView = Backbone.View.extend({
-  tagName: 'div',
-  className: 'wishes-container',
+  tagName: 'ul',
 
   render: function() {
     this.$el.html('');
@@ -13,6 +12,7 @@ var WishView = Backbone.View.extend({
 
   initialize: function() {
     this.listenTo(this.collection, 'change', this.render);
+    this.listenTo(this.collection, 'destroy', this.render);
   }
 
 });
