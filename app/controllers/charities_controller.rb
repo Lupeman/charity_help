@@ -44,15 +44,19 @@ class CharitiesController < ApplicationController
   def create
     @charity = Charity.new(charity_params)
 
-    respond_to do |format|
-      if @charity.save
-        format.html { redirect_to @charity, notice: 'Charity was successfully created.' }
-        format.json { render :show, status: :created, location: @charity }
-      else
-        format.html { render :new }
-        format.json { render json: @charity.errors, status: :unprocessable_entity }
-      end
+    if @charity.save
+      render json: @charity
     end
+    # respond_to do |format|
+    #   if @charity.save
+    #     # redirect_to root_path
+    #     format.html { redirect_to @charity, notice: 'Charity was successfully created.' }
+    #     format.json { render json: @charity, status: :created }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @charity.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /charities/1
