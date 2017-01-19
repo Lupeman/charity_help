@@ -20,4 +20,14 @@ function addWish() {
 }
 
 
+function removeWish(wishid) {
+}
+
+$('#removefromwishlistbutton').click(function() {
+    var inputVal = $("input[name='wish']:checked").val();
+    var selectedWish = wishes.get(inputVal);
+    selectedWish.destroy();
+});
+
+
 $('#addwishlistbutton').on('click', addWish);
