@@ -1,13 +1,18 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4 img-responsive pull-right">
-      <img src="{{ logo.url }}" alt="charity_logo" class="img-rounded">
-    </div>
-    <div class="col-md-8">
-      <h1 class="charity_name" contenteditable="true"> {{ charity_name }} </h1>
-      <a class="url" contenteditable="true" href="{{ url }}">Charity Website</a>
-      <p class="description" contenteditable="true"> {{ description }} </p>
-      <p class="shipping_address" contenteditable="true"> {{ shipping_address }} </p>
+<div class="container">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-4 img-responsive">
+        <img src="{{ logo.url }}" alt="charity_logo" class="img-rounded">
+      </div>
     </div>
   </div>
+
+  <div class="container">
+    <h1 class="charity_name text-center" contenteditable="true"> {{ charity_name }} </h1>
+    <a class="url" contenteditable="true" href="{{ url }}">Charity Website</a>
+    <p class="description lead" contenteditable="true"> {{ description }} </p>
+    <p class="shipping_address lead" contenteditable="true"> {{ shipping_address }} </p>
+  </div>
+
 </div>
