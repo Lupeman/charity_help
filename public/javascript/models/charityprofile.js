@@ -2,7 +2,7 @@ var Charityprofile = Backbone.Model.extend({
   urlRoot: '/charities',
 
   updateProps: function(element) {
-    this.set(element.className, element.textContent);
+    this.set(element.id, element.textContent);
     this.save();
   }
 
