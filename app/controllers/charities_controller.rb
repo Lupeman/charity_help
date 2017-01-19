@@ -4,7 +4,7 @@ class CharitiesController < ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :require_login, only: [:new, :create]
 
-
+  
   # GET /charities
   # GET /charities.json
   def index
