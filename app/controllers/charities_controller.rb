@@ -2,6 +2,7 @@ class CharitiesController < ApplicationController
   before_action :set_charity, only: [:show, :edit, :update, :destroy]
 
   skip_before_action :verify_authenticity_token
+  skip_before_action :require_login, only: [:new, :create]
 
 
   # GET /charities
