@@ -41,3 +41,12 @@ function hideWishlist() {
 }
 
 hideWishlist();
+
+function hidePurchasing() {
+  if (donorView === false) {
+    $('#removefromwishlistbutton').addClass('hidden');
+    $('input:radio').hide();
+  }
+}
+
+hidePurchasing();

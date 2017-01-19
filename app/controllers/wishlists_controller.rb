@@ -50,9 +50,11 @@ class WishlistsController < ApplicationController
   # DELETE /wishlists/1
   # DELETE /wishlists/1.json
   def destroy
-    @wishlist.destroy
-    respond_to do |format|
-      format.json { head :no_content }
+    if current_user.donors.exists? || (current_user.charities.exists? && current_user.charity_ids[0] == @wishlist.charity_id)
+      @wishlist.destroy
+      respond_to do |format|
+        format.json { head :no_content }
+      end
     end
   end
 
