@@ -25,10 +25,11 @@ class WishlistsController < ApplicationController
   # POST /wishlists
   # POST /wishlists.json
   def create
-    @wishlist = Wishlist.new(wishlist_params)
-
-    if @wishlist.save
-      render json: @wishlist
+    if current_user.charities.exists && current_user.charities.ids[0] == wishlist_params["charity_id"].to_i
+      @wishlist = Wishlist.new(wishlist_params)
+        if @wishlist.save
+          render json: @wishlist
+        end
     end
   end
 
