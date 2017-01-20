@@ -13,16 +13,7 @@
   </head>
 
   <body>
-    <!-- The overlay -->
-    <div id="charity-overlay" class="overlay">
 
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" style="text-decoration: none" onclick="closeOverlay()">&times;</a>
-
-      <!-- Overlay content -->
-      <div id="overlay-content" class="overlay-content"></div>
-
-    </div
     <div class="header">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -43,7 +34,7 @@
               <% else %>
                 <a class="links" href="/users/new">Sign Up</a>
                 <a class="links" href="/login">Login</a>
-                <a><span onclick="openOverlay()" class="glyphicon glyphicon-menu-hamburger"></span>
+                <a><span id="charity-overlay" onclick="openOverlay()" class="glyphicon glyphicon-menu-hamburger"></span>
                 </a>
               <% end %>
             </div>
