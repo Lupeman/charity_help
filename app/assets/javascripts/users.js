@@ -45,6 +45,7 @@ $(document).ready(function() {
 
       if (isInvalidUser || isInvalidDonor || isInvalidCharity) {
         $('#error-msg').removeClass('hide');
+        console.log("error!")
       } else {
         $('#error-msg').addClass('hide');
         registerUser();
