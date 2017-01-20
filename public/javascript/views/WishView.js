@@ -6,6 +6,7 @@ var WishView = Backbone.View.extend({
       var view = new WishItemView({ model: wish});
       this.$el.append(view.render().el);
     }, this);
+    hidePurchasing();
     return this;
   },
 
