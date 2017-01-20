@@ -94,6 +94,7 @@ $(document).ready(function() {
             // execute ajax to create donor
             $.ajax(settings).done(function() {
                 $('#success-msg').removeClass('hide');
+                window.location = '/charities'
             });
 
         } else {
