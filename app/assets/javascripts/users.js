@@ -45,6 +45,7 @@ $(document).ready(function() {
 
       if (isInvalidUser || isInvalidDonor || isInvalidCharity) {
         $('#error-msg').removeClass('hide');
+        console.log("error!")
       } else {
         $('#error-msg').addClass('hide');
         registerUser();
@@ -93,6 +94,7 @@ $(document).ready(function() {
             // execute ajax to create donor
             $.ajax(settings).done(function() {
                 $('#success-msg').removeClass('hide');
+                window.location = '/charities'
             });
 
         } else {

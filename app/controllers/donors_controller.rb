@@ -29,15 +29,18 @@ class DonorsController < ApplicationController
   def create
     @donor = Donor.new(donor_params)
 
-    respond_to do |format|
-      if @donor.save
-        format.html { redirect_to @donor, notice: 'Donor was successfully created.' }
-        format.json { render :show, status: :created, location: @donor }
-      else
-        format.html { render :new }
-        format.json { render json: @donor.errors, status: :unprocessable_entity }
-      end
+    if @donor.save
+      render json: @donor
     end
+    # respond_to do |format|
+    #   if @donor.save
+    #     format.html { redirect_to @donor, notice: 'Donor was successfully created.' }
+    #     format.json { render :show, status: :created, location: @donor }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @donor.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /donors/1
