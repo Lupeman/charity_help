@@ -29,3 +29,11 @@ p {
     width: auto;
     display: inline;
 }
+
+.logo-container {
+  height: 200px;
+}
+
+.charity-logo {
+  height: 100%;
+}
