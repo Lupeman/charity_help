@@ -26,9 +26,12 @@ function addWish() {
 
 
 $('#removefromwishlistbutton').click(function() {
-    var inputVal = $("input[name='wish']:checked").val();
-    var selectedWish = wishes.get(inputVal);
-    selectedWish.destroy();
+    var selectedCheckboxes = $("input[name='wish']:checked");
+    selectedCheckboxes.each(function(index, checkbox) {
+      var checkboxValue = $(checkbox).val();
+      var selectedWish = wishes.get(checkboxValue);
+      selectedWish.destroy();
+    });
 });
 
 
@@ -45,7 +48,7 @@ hideWishlist();
 function hidePurchasing() {
   if (donorView === false) {
     $('#removefromwishlistbutton').addClass('hidden');
-    $('input:radio').hide();
+    $('.wish-selector').hide();
   }
 }
 
