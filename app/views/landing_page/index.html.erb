@@ -9,6 +9,7 @@
 
 </div>
 
+
 <section class="section1">
     <div class="jumbotron">
       <div class="container">
@@ -16,20 +17,19 @@
     </div>
   </div>
 </section>
+<a href="#section2" class="arrow_link"><%= image_tag('down_arrow.png', class: "down") %></a>
 
-<section class="section2">
-  <%= image_tag('down_arrow.png', class: "down") %></div>
+<section class="section2" id="section2">
       <div class="container">
       <p>Let us help <span>you</span> make a difference!</p>
       <p>Here at helping hands! we know you want to help! We also know that it can be difficult to find the right charity and then to sort out what they really need.</p>
       <p>So we've done all the heavy lifting and brought a world of charities to you!</p>
     </div>
 </section>
-
+<a href="#section3" class="arrow_link"><%= image_tag('down_arrow.png', class: "down") %></a>
 
 <div class="container section3-container">
-    <%= image_tag('down_arrow.png', class: "down") %></div>
-  <main class="main">
+  <main class="main" id="section3">
     <div class="main-container">
       <section class="section3">
         <h1>As easy as 1, 2, 3...</h1>
@@ -64,12 +64,14 @@
             <p id="wish_blurb">Your help goes a long way to help those in need!</p>
           </div>
         </div>
+        <a href="#footer" class="arrow_link" id="footer_arrow"><%= image_tag('down_arrow.png', class: "down") %></a>
       </section>
     </div>
    </main>
 </div>
 
-<footer class="footer">
+
+<footer class="footer" id="footer">
   <div class="container footer-container">
     <ul class="nav nav-tabs-alt">
       <li class>
