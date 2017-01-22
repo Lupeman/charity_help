@@ -8,7 +8,7 @@
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0;
+  margin: -75px 0 0 0;
   width: 100%;
 }
 
@@ -25,6 +25,9 @@
   margin-top: 60px;
 }
 
+.dropdowns {
+  margin-top: -40px;
+}
 .search_blurb {
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
