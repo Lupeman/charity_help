@@ -24,7 +24,7 @@
   padding: 0;
 }
  .nav-style {
-   background-color: #ffffff;  
+   background-color: #ffffff;
    margin: 0;
    border: none;
  }
@@ -142,6 +142,22 @@
      font-size: 60px;
      text-decoration: none;
  }
+
+  .copyright a {
+    color: #222224;
+  }
+  .copyright a:hover {
+    text-decoration: none;
+    color:#FF6E00;
+    background: none;
+    }
+
+  .scroll-arrow {
+    height: 50px;
+    float:right;
+    margin-top: -60px;
+    margin-right:40px;
+    }
 
  /*When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap*/
 

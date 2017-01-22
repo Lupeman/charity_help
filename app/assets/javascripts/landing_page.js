@@ -1,9 +1,5 @@
-$(document).ready(function(){
-  var scrollToTop = function(){
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
-  }
 
-  $('.scrollUp').on('click', scrollToTop);
+$(document).ready(function(){
 
   $(window).scroll(function(){
       $(".jumbo-text").css("opacity", 1 - $(window).scrollTop() / 250);
@@ -22,7 +18,7 @@ $(document).ready(function(){
   $('#contact-info-tab').on('click', showContactInfo);
   $('#enquire-now-tab').on('click', showEnquireNow);
 
-})
+});
 
 // Open overlay
 function openOverlay() {
