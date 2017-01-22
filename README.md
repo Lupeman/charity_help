@@ -12,7 +12,7 @@ The brief of the project was to:
 - Deploy your application online
 
 ### "I want to help... but nothing!"
-"But Nothing!" is an application that aims to connects people and charities online. The application allows charities to sign up and create a wishlist of items that their charity needs. The wishlist holds information such as the item's name, estimated price and a link to where it can be bought online. Donors are able to search through the list of charities in the application, view their wishlists and make a donation.
+"But Nothing!" is an application that aims to connect people and charities online. The application allows charities to sign up and create a wishlist of items that their charity needs. The wishlist holds information such as the item's name, estimated price and a link to where it can be bought online. Donors are able to search through the list of charities in the application, view their wishlists and make a donation.
 
 ### Technologies used:
 Ruby, Ruby On Rails, HTML, CSS, SASS, Bootstrap, Carrier Wave JavaScript, Jquery, Underscore.Js, Handlebars.Js, Backbone.Js, Atom (editor), debugger, iTerm, Git, Trello.com.
