@@ -1,20 +1,16 @@
-<div class="container">
+<div class="row">
 
-  <div class="container">
-
-    <h1 id="charity_name" class="text-center" contenteditable="{{ isProfileEditable }}"> {{ charity_name }} </h1>
-    <p class="text-center"><a id="url" href="{{ charity_website }}"> {{ charity_website }} </a></p>
-    <p id="description" class="text-center" contenteditable={{ isProfileEditable }}> {{ description }} </p>
-    <p id="shipping_address" class="text-center" contenteditable="{{ isProfileEditable }}"> {{ shipping_address }} </p>
-
+  <div class="col-xs-3">
+    <div class="img-responsive text-center logo-container">
+        <img src="{{ logo.url }}" alt="charity_logo" class="img-rounded center-block charity-logo">
+    </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="img-responsive text-center logo-container">
-        <img src="{{ logo.url }}" alt="charity_logo" class="img-rounded center-block charity-logo">
-      </div>
-    </div>
+  <div class="col-xs-6">
+    <h1 id="charity_name" class="text-center" contenteditable="{{ isProfileEditable }}"> {{ charity_name }} </h1>
+    <p class="text-center"><a id="url" href="{{ charity_website }}"> {{ charity_website }} </a></p>
+    <p id="description" class="text-center" contenteditable= {{ isProfileEditable }}> {{ description }} </p>
+    <p id="shipping_address" class="text-center" contenteditable="{{ isProfileEditable }}"> {{ shipping_address }} </p>
   </div>
 
 </div>
