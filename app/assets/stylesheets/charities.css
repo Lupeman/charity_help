@@ -11,20 +11,15 @@ a:link {
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 h1, h3 {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 p {
   font-size: 16px;
-  font-family: 'Francois';
+  font-family: 'Poppins', sans-serif;
   padding: 5px;
 }
 
 .charity-logo {
   width: 220px;
 }
-
-/*.panel > .wishlist-heading {
-    background-color: #222224;
-    color: white;
-}*/
