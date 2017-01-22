@@ -105,6 +105,8 @@
      text-align: center; /* Centered text/links */
      margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
      list-style-type: none;
+     font-family: 'Poppins', sans-serif;
+    line-height: 30px;
      -webkit-columns: 3 200px;
         -moz-columns: 3 200px;
              columns: 3 200px;
@@ -118,29 +120,34 @@
      padding: 10px;
      text-decoration: none;
      font-size: 24px;
-     color: #222224;
+     color: white;
      display: block; /* Display block instead of inline */
      transition: 0.3s; /* Transition effects on hover (color) */
  }
 
  .type {
-   font-size: 18px;
+   font-size: 16px;
    color: #57575c;
  }
 
  /*When you mouse over the navigation links, change the colour*/
  .overlay a:hover, .overlay a:focus {
-     color: #f1f1f1;
+     color: #FF6E00;
      text-decoration: none;
+ }
+
+ .overlay-content > li a:hover {
+    background-color: transparent;
  }
 
  /*Position the close button (top right corner)*/
  .overlay .closebtn {
      position: absolute;
-     top: 60px;
+     top: 110px;
      right: 45px;
      font-size: 60px;
      text-decoration: none;
+     background-color: transparent;
  }
 
   .copyright a {
