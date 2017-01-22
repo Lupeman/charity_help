@@ -1,6 +1,15 @@
-.dropdown-menu li:hover {
-  color: #00bcd4;
-  font-weight: bold;
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+.search_container {
+  background-image: image-url('charity_search_background.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  width: 100%;
 }
 
 #error-message {
@@ -10,4 +19,109 @@
 
 #error-message.error {
   visibility: visible;
+}
+
+.container_search {
+  margin-top: 60px;
+}
+
+.search_blurb {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  margin-top: 170px;
+  text-transform:uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.search_dropdown {
+  margin-left: 50%;
+}
+
+.charity_search_btn {
+  margin-left: 190px;
+  margin-top: 114px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 12px 20px;
+  background-color: #222224;
+  border:none;
+  box-shadow: none;
+}
+
+.charity_search_btn:hover {
+  background-color: #FF6E00;
+  color: #ffffff;
+}
+
+#cause_search, #location_search {
+  background: #ffffff;
+  color:#222224;
+  font-size: 18px;
+  border-radius: 0;
+  padding: 10px 15px;
+}
+
+#cause_search:hover, #location_search:hover {
+  background:#ffffff;
+
+}
+
+#cause_search_ul li, #location_search_ul li {
+  padding: 5px 30px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#cause_search_ul li:hover, #location_search_ul li:hover {
+  color: #FF6E00;
+}
+
+// #charities_results_container {
+//   height:100vh;
+// }
+
+#charities-results {
+  margin-left: 10%;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.name_search {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.name_search a:hover {
+  background: none;
+  color:#222224;
+  font-style: italic;
+}
+
+.results {
+  margin-top: 400px;
+}
+
+#charities-results p {
+  font-size: 15px;
+  padding-right: 100px;
+  margin-left: -30px;
+}
+
+.logo_search {
+  height: 80px;
+  margin: 30px 50px;
+  border: 1px solid #222224;
+}
+
+.more {
+  font-style: italic;
+  font-size: 12px;
+  color: #FF6E00;
+}
+
+.more:hover {
+  color:#222224;
+  background: none;
 }
