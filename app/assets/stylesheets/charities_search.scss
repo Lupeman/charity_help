@@ -4,7 +4,7 @@
 
 
 .search_container {
-  background-image: image-url('search_background.jpg');
+  background-image: image-url('charity_search_background.jpg');
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
   color: #ffffff;
-  margin-top: 150px;
+  margin-top: 170px;
   text-transform:uppercase;
   text-align: center;
   font-weight: bold;
@@ -112,6 +112,7 @@
 .logo_search {
   height: 80px;
   margin: 30px 50px;
+  border: 1px solid #222224;
 }
 
 .more {

@@ -95,20 +95,3 @@ var findCharityMatch = function(){
       });
 
 });
-
-
-
-// if(charity.cause == charityDetails[0] && charity.location == charityDetails[1]){ charitySearchResults.push(charity)
-// }else{
-//   $('.charities-results').innerHTML("We could not find a charity to match that criteria. Please search again!");
-// }
-
-
-
-  // var select = event.target;
-  // debugger
-  // var charities = Charities.all
-  // _.each(charities, function(charity){
-  //   console.log(charity);
-  //   console.log(charity_name);
-  // })
