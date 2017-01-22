@@ -18,6 +18,7 @@
 </section>
 
 <section class="section2">
+  <%= image_tag('down_arrow.png', class: "down") %></div>
       <div class="container">
       <p>Let us help <span>you</span> make a difference!</p>
       <p>Here at helping hands! we know you want to help! We also know that it can be difficult to find the right charity and then to sort out what they really need.</p>
@@ -27,67 +28,42 @@
 
 
 <div class="container section3-container">
+    <%= image_tag('down_arrow.png', class: "down") %></div>
   <main class="main">
     <div class="main-container">
       <section class="section3">
         <h1>As easy as 1, 2, 3...</h1>
-        <div class="row">
+        <div class="row row1">
           <div class="col-md-2">
+            <%= image_tag('cupped_hand.png', class: "cupped_hand") %>
           </div>
           <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-2">
-                <%= image_tag('arrow.png', class: "arrow") %>
-              </div>
-              <div class="col-md-8">
-                <p>Pick a cause.</p>
-              </div>
-              </div>
+            <p>Pick a cause.</p>
+            <p id="cause_blurb">We've got plenty of great causes for you to chose from.</p>
+          </div>
+        </div>
+
+        <div class="row row2">
+          <div class="col-md-5">
+          </div>
+          <div class="col-md-2">
+            <%= image_tag('world.png', class: "world") %>
+          </div>
+          <div class="col-md-5">
+            <p>Pick a location.</p>
+            <p id="location_blurb">Stay close to home or explore the world</p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-2">
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-2">
-                <%= image_tag('arrow.png', class: "arrow") %>
-              </div>
-              <div class="col-md-8 col-location">
-                <p>Pick a location.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="row">
-              <div class="col-md-12">
-                <%= image_tag('logo2.png', class: "logo_in_hand") %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <%= image_tag('cupped_hand.png', class: "cupped_hand") %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-2">
+              <%= image_tag('heart.png', class: "heart") %>
           </div>
           <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-2">
-                <%= image_tag('arrow.png', class: "arrow") %>
-              </div>
-              <div class="col-md-8">
-                <p>Fullfill a wish!</p>
-              </div>
-            </div>
+            <p>Fullfill a wish!</p>
+            <p id="wish_blurb">Your help goes a long way to help those in need!</p>
           </div>
         </div>
-
       </section>
     </div>
    </main>
@@ -143,11 +119,11 @@
         </div>
         <div class="col-md-4">
           <form action="#" method="post" class="enquiry-form">
-            <input type="text" placeholder="Subject" value name="subject" id="subject" class="form-control">
-            <input type="text" placeholder="Your name" value name="name" id="name" class="form-control">
-            <input type="email" placeholder="Your email" value name="email" id="email" class="form-control">
-            <textarea id="message" id="message" class="form-control" rows="3" name="message" placeholder="Your message"></textarea>
-            <button class="btn btn-primary btn-block" type="submit">Send Enquiry</button>
+            <input type="text" placeholder="Subject" value name="subject" id="subject" class="form-control enq_form"></br>
+            <input type="text" placeholder="Your name" value name="name" id="name" class="form-control enq_form"></br>
+            <input type="email" placeholder="Your email" value name="email" id="email" class="form-control enq_form"></br>
+            <textarea id="message" id="message" class="form-control" rows="3" name="message" placeholder="Your message"></textarea></br>
+            <button class="btn btn-primary btn-block enq_btn" type="submit">Send Enquiry</button>
           </form>
         </div>
       </div>
