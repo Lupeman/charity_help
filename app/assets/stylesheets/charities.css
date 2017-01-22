@@ -6,15 +6,11 @@ a:link {
   text-decoration: none;
 }
 
-.wishlist-add {
-  width: 600px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-h1 {
+h1, h3 {
   font-family: 'Poppins';
 }
 
@@ -24,16 +20,11 @@ p {
   padding: 5px;
 }
 
-.form-control-inline {
-    min-width: 0;
-    width: auto;
-    display: inline;
-}
-
-.logo-container {
-  height: 200px;
-}
-
 .charity-logo {
-  height: 100%;
+  width: 220px;
 }
+
+/*.panel > .wishlist-heading {
+    background-color: #222224;
+    color: white;
+}*/

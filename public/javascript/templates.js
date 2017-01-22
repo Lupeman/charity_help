@@ -27,26 +27,26 @@ templates['charity'] = template({"compiler":[7,">= 4.0.0"],"main":function(conta
     + "\" />\n<br />\n";
 },"useData":true});
 templates['charityprofile'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+    var stack1, helper, alias1=container.escapeExpression, alias2=depth0 != null ? depth0 : {}, alias3=helpers.helperMissing, alias4="function";
 
-  return "<div class=\"container\">\n\n  <div class=\"container\">\n\n    <h1 id=\"charity_name\" class=\"text-center\" contenteditable=\""
-    + alias4(((helper = (helper = helpers.isProfileEditable || (depth0 != null ? depth0.isProfileEditable : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"isProfileEditable","hash":{},"data":data}) : helper)))
+  return "<div class=\"row\">\n\n  <div class=\"col-xs-3\">\n    <div class=\"img-responsive text-center logo-container\">\n        <img src=\""
+    + alias1(container.lambda(((stack1 = (depth0 != null ? depth0.logo : depth0)) != null ? stack1.url : stack1), depth0))
+    + "\" alt=\"charity_logo\" class=\"img-rounded center-block charity-logo\">\n    </div>\n  </div>\n\n  <div class=\"col-xs-6\">\n    <h1 id=\"charity_name\" class=\"text-center\" contenteditable=\""
+    + alias1(((helper = (helper = helpers.isProfileEditable || (depth0 != null ? depth0.isProfileEditable : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"isProfileEditable","hash":{},"data":data}) : helper)))
     + "\"> "
-    + alias4(((helper = (helper = helpers.charity_name || (depth0 != null ? depth0.charity_name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"charity_name","hash":{},"data":data}) : helper)))
+    + alias1(((helper = (helper = helpers.charity_name || (depth0 != null ? depth0.charity_name : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"charity_name","hash":{},"data":data}) : helper)))
     + " </h1>\n    <p class=\"text-center\"><a id=\"url\" href=\""
-    + alias4(((helper = (helper = helpers.charity_website || (depth0 != null ? depth0.charity_website : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"charity_website","hash":{},"data":data}) : helper)))
+    + alias1(((helper = (helper = helpers.charity_website || (depth0 != null ? depth0.charity_website : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"charity_website","hash":{},"data":data}) : helper)))
     + "\"> "
-    + alias4(((helper = (helper = helpers.charity_website || (depth0 != null ? depth0.charity_website : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"charity_website","hash":{},"data":data}) : helper)))
-    + " </a></p>\n    <p id=\"description\" class=\"text-center\" contenteditable="
-    + alias4(((helper = (helper = helpers.isProfileEditable || (depth0 != null ? depth0.isProfileEditable : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"isProfileEditable","hash":{},"data":data}) : helper)))
+    + alias1(((helper = (helper = helpers.charity_website || (depth0 != null ? depth0.charity_website : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"charity_website","hash":{},"data":data}) : helper)))
+    + " </a></p>\n    <p id=\"description\" class=\"text-center\" contenteditable= "
+    + alias1(((helper = (helper = helpers.isProfileEditable || (depth0 != null ? depth0.isProfileEditable : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"isProfileEditable","hash":{},"data":data}) : helper)))
     + "> "
-    + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
+    + alias1(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"description","hash":{},"data":data}) : helper)))
     + " </p>\n    <p id=\"shipping_address\" class=\"text-center\" contenteditable=\""
-    + alias4(((helper = (helper = helpers.isProfileEditable || (depth0 != null ? depth0.isProfileEditable : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"isProfileEditable","hash":{},"data":data}) : helper)))
+    + alias1(((helper = (helper = helpers.isProfileEditable || (depth0 != null ? depth0.isProfileEditable : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"isProfileEditable","hash":{},"data":data}) : helper)))
     + "\"> "
-    + alias4(((helper = (helper = helpers.shipping_address || (depth0 != null ? depth0.shipping_address : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"shipping_address","hash":{},"data":data}) : helper)))
-    + " </p>\n\n  </div>\n\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"img-responsive text-center logo-container\">\n        <img src=\""
-    + alias4(container.lambda(((stack1 = (depth0 != null ? depth0.logo : depth0)) != null ? stack1.url : stack1), depth0))
-    + "\" alt=\"charity_logo\" class=\"img-rounded center-block charity-logo\">\n      </div>\n    </div>\n  </div>\n\n</div>\n";
+    + alias1(((helper = (helper = helpers.shipping_address || (depth0 != null ? depth0.shipping_address : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"shipping_address","hash":{},"data":data}) : helper)))
+    + " </p>\n  </div>\n\n</div>\n";
 },"useData":true});
 })();
