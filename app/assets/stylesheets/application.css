@@ -16,14 +16,26 @@
 
  @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+.page-container {
+  margin: 0;
+  padding: 0;
+}
+.nav-container {
+  padding: 0;
+}
  .nav-style {
-   background-color: #00bcd4;
+   background-color: #ffffff;  
    margin: 0;
    border: none;
+ }
+
+ .navbar-default .navbar-text {
+   color: #222224;
  }
  .navbar-text {
    font-size: 50px;
    margin-top: 30px;
+   color: #222224;
  }
 
   .navbar-text, .links {
@@ -31,9 +43,13 @@
    font-family: 'Poppins', sans-serif;
   }
 
+  .nav_links {
+    margin-top: 40px;
+  }
   .nav_links a {
     background:none;
     padding-right: 15px;
+    font-size: 18px;
   }
 
   .links:hover {
@@ -42,19 +58,30 @@
      text-decoration: none;
   }
 
- .hamburger-icon {
-   height: 60px;
-   margin-top: 5px;
-   padding-left: 20px;
- }
+  .glyphicon-menu-hamburger:hover {
+    color: #FF6E00
+  }
 
  .logo {
    float:left;
-   height: 60px;
-   margin-top: -8px;
+   height: 70px;
+   margin-top: 5px;
    margin-left: 70px;
  }
 
+.logoutLink {
+  box-shadow: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  float: right;
+  margin-top: -10px;
+}
+
+.logoutLink:hover {
+  color: #FF6E00;
+}
 
  /*The Overlay (background)*/
  .overlay {

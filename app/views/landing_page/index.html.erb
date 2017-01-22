@@ -1,7 +1,7 @@
 <section class="section1">
     <div class="jumbotron">
       <div class="container">
-      <p class="jumbo-text">"I want to help but...."</p>
+        <p class="jumbo-text">"I want to help but...."</p>
     </div>
   </div>
 </section>
@@ -15,8 +15,7 @@
 </section>
 
 
-<div class="container">
-
+<div class="container section3-container">
   <main class="main">
     <div class="main-container">
       <section class="section3">
@@ -39,15 +38,27 @@
         <div class="row">
           <div class="col-md-2">
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
             <div class="row">
               <div class="col-md-2">
                 <%= image_tag('arrow.png', class: "arrow") %>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-8 col-location">
                 <p>Pick a location.</p>
               </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="row">
+              <div class="col-md-12">
+                <%= image_tag('logo2.png', class: "logo_in_hand") %>
               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <%= image_tag('cupped_hand.png', class: "cupped_hand") %>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -62,21 +73,17 @@
               <div class="col-md-8">
                 <p>Fullfill a wish!</p>
               </div>
-              </div>
+            </div>
           </div>
         </div>
-        </section>
+
+      </section>
     </div>
    </main>
-
 </div>
 
-
-
-
-
 <footer class="footer">
-  <div class="container">
+  <div class="container footer-container">
     <ul class="nav nav-tabs-alt">
       <li class>
         <p id="contact-info-tab">Contact Info</p>
@@ -97,17 +104,17 @@
         <div class="col-md-4">
           <%= image_tag('location-icon.png', class: "location-icon") %>
           <h4>Address</h4>
-          <p>12a/45 William St, Melbourne VIC 3000 Australia</p>
+          <p class="comp_info">12a/45 William St, Melbourne VIC 3000 Australia</p>
         </div>
         <div class="col-md-4">
           <%= image_tag('phone-icon.png', class: "phone-icon") %>
           <h4>Phone</h4>
-          <p>(03) 8592 7303</p>
+          <p class="comp_info">(03) 8592 7303</p>
         </div>
         <div class="col-md-4">
           <%= image_tag('email-icon.png', class: "email-icon") %>
           <h4>E-mail</h4>
-          <p>info@butnothing.com</p>
+          <a href="mailto:info@butnothing.com"><p class="comp_info">info@butnothing.com</p></a>
         </div>
       </div>
     </div>

@@ -3,13 +3,14 @@
   <head>
     <title>CharityHelp</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= javascript_include_tag 'application' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application' %>
     <script src="http://underscorejs.org/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <script src="http://backbonejs.org/backbone-min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
@@ -25,7 +26,7 @@
     </div
     <div class="header">
       <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
+        <div class="container-fluid nav-container">
           <div class="row nav-style">
             <div class="col-md-9">
               <a class="navbar-brand" href="/">
@@ -54,7 +55,7 @@
 
 
 
-    <div class="container-fluid">
+    <div class="container-fluid page-container">
       <%= yield %>
     </div>
 

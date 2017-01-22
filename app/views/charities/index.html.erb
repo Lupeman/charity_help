@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Charities</h1>
-oooh
-<div class="container">
+<div class="container search_container">
+  <div class="search_section1">
+    <p class="search_blurb">Where would you like to make a difference?</p>
+  </div>
   <div class="row">
     <div class="col-md-4">
       <p id="error-message">Apologies, there aren't any charities matching that criteria.</p>
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Charity Cause
+      <div class="dropdown search_dropdown">
+        <button class="btn btn-primary dropdown-toggle" id="cause_search" type="button" data-toggle="dropdown">Charity Cause
         <span class="caret"></span></button>
-        <ul id="cause" class="dropdown-menu">
+        <ul class="cause_search dropdown-menu" id="cause_search_ul">
           <li>Animals</li>
           <li>Homeless</li>
           <li>Environmental</li>
@@ -20,28 +21,32 @@ oooh
         </ul>
       </div>
     </div>
-<div class="col-md-4">
-  <p id="error-message">Apologies, there aren't any charities matching that criteria.</p>
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Charity Locations
-    <span class="caret"></span></button>
-    <ul id="location" class="dropdown-menu">
-      <li>Victoria</li>
-      <li>South Australia</li>
-      <li>Tasmania</li>
-      <li>New South Wales</li>
-      <li>Western Australia</li>
-      <li>Queensland</li>
-      <li>ACT</li>
-      <li>Northern Territory</li>
-      <li>International</li>
-    </ul>
+    <div class="col-md-4">
+      <p id="error-message">Apologies, there aren't any charities matching that criteria.</p>
+      <div class="dropdown search_dropdown">
+        <button class="btn btn-primary dropdown-toggle" id="location_search" type="button" data-toggle="dropdown">Charity Locations
+        <span class="caret"></span></button>
+        <ul class="location_search dropdown-menu" id="location_search_ul">
+          <li>Victoria</li>
+          <li>South Australia</li>
+          <li>Tasmania</li>
+          <li>New South Wales</li>
+          <li>Western Australia</li>
+          <li>Queensland</li>
+          <li>ACT</li>
+          <li>Northern Territory</li>
+          <li>International</li>
+        </ul>
+      </div>
+    </div>
+    <button class="charity_search_btn">Search</button>
   </div>
 </div>
+
+</div class="charities_results_container">
+  <div><a class="results"></a></div>
+  <div id="charities-results"></div>
 </div>
-</div>
-<button class="charity_search_btn">Search</button>
-<div id="charities-results"></div>
 
 
 
