@@ -8,10 +8,10 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
-      if user.donors.exists?
-        redirect_to donor_path(user)
-      elsif user.charities.exists?
-        redirect_to charity_path(user)
+      if user.donor.present?
+        redirect_to charities_path
+      elsif user.charity.present?
+        redirect_to charity_url(current_user.charity.id)
       end
     else
       # Create an error message.

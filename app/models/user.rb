@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :charities
-  has_many :donors
+  has_one :charity
+  has_one :donor
 
   has_secure_password
 
