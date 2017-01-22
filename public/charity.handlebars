@@ -1,5 +1,15 @@
 <div class="row">
-<h2 class="name"><a href="/charities/{{ id }}" class="profile-link">{{ name }}</a></h2>
-<p class="description">{{ description }}</p>
-<img class="logo" src="{{ url }}" />
-<br />
+  <div class="col-md-3 search_name">
+    <h2 class="name_search"><a href="/charity/{{ id }}" class="profile-link">{{ name }}</a></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3 search_logo">
+    <img class="logo_search" src="{{ url }}" />
+  </div>
+  <div class="col-md-9 search_descripton">
+    <p class="description_search">{{ description }}<a href="/charity/{{ id }}" class="more"> learn more....</a></p>
+  </div>
+</div>
+<hr>
+</br>
